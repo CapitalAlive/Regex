@@ -1,0 +1,22 @@
+from regex import *
+
+tests = ['colou?r|color',
+         'colou?r|colour',
+         'colou?r|colouur',
+         ".?|aaa",
+         "^app|apple",
+         "colou*r|color",
+         "colou+r|colour",
+         "no+$|noooooooope",
+         "^no+|noooooooope",
+         "^n.+pe$|noooooooope",
+         ".+|aaa",
+         "^.*c$|abcabc",
+         "3\+3|3+3=6",
+         "\.$|end.",
+         "\\\\|\\"
+         ]
+for test in tests:
+    print("                ", test)
+    r, w = test.split("|")
+    print(regex_function(r, w, testing=False))
